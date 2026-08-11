@@ -53,7 +53,7 @@ body {
 
 .btn-toggle:hover {
   background-color: #f1f5f9;
-  color: #2563eb;
+  color: #68696a;
 }
 
 .logo {
@@ -79,7 +79,7 @@ body {
 }
 
 .menu li:hover {
-  color: #2563eb;
+  color: #64cbff;
 }
 
 .menu-sidebar {
@@ -133,7 +133,7 @@ body {
 
 .sidebar-item a:hover {
   background-color: #f1f5f9;
-  color: #2563eb;
+  color: #475569;
 }
 
 .menu-sidebar.recolhida .sidebar-item a span {
@@ -213,7 +213,7 @@ body {
 
 .dark-mode i:hover,
 .dark-mode i.ativo {
-  color: #2563eb;
+  color: #475569;
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -265,7 +265,7 @@ body {
 }
 
 .rodape-links a:hover {
-  color: #2563eb;
+  color: #475569;
 }
 
 body.dark {
@@ -292,7 +292,7 @@ body.dark .btn-toggle:hover,
 body.dark .menu li:hover,
 body.dark .sidebar-item a:hover,
 body.dark .rodape-links a:hover {
-  color: #60a5fa;
+  color: #475569;
   background-color: #334155;
 }
 
