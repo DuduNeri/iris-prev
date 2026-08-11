@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,22 +7,127 @@
     <link rel="stylesheet" href="../src/styles/global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../src/styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <header>
-      <div class="cabeçalho">
-        <img src="../src/assets/logo.png" alt="" />
+      <div class="cabecalho">
+        <div class="logo-area">
+          <button
+            id="toggle-sidebar"
+            class="btn-toggle"
+            aria-label="Alternar Menu"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <img class="logo" src="../src/assets/logo.png" alt="Logo Iris-Prev" />
+        </div>
 
-        <nav>
+        <nav class="menu">
+          <ul class="dark-mode">
+            <i class="bi bi-moon-stars"></i>
+            <i class="bi bi-sun-fill"></i>
+          </ul>
           <li>Home</li>
           <li>Clientes</li>
           <li>Processos</li>
         </nav>
       </div>
+
+      <aside id="sidebar" class="menu-sidebar">
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <a href="#processos">
+              <i class="bi bi-folder2-open"></i>
+              <span>Processos</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#clientes">
+              <i class="bi bi-people"></i>
+              <span>Clientes</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#financeiro">
+              <i class="bi bi-cash-stack"></i>
+              <span>Financeiro</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#comunicacoes">
+              <i class="bi bi-chat-dots"></i>
+              <span>Comunicações</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#documentos">
+              <i class="bi bi-file-earmark-text"></i>
+              <span>Documentos</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#assinatura-digital">
+              <i class="bi bi-pen"></i>
+              <span>Assinatura Digital</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#configuracoes">
+              <i class="bi bi-gear"></i>
+              <span>Configurações</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-perfil">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKwg-G4YucEFEfSGnjBsI7V1MrKfaIocB6SVMUQWEThKYaxerh2x7dSs&s"
+            alt="Foto de Perfil"
+            class="perfil-foto"
+          />
+          <div class="perfil-info">
+            <span class="perfil-nome">Nome do Usuário</span>
+            <span class="perfil-cargo">Advogado</span>
+          </div>
+        </div>
+      </aside>
     </header>
+
+    <main id="conteudo" class="conteudo-principal"></main>
+
+    <footer id="rodape" class="rodape">
+      <div class="rodape-conteudo">
+        <p>&copy; 2026 Iris-Prev. Todos os direitos reservados.</p>
+        <div class="rodape-links">
+          <a href="#suporte"><i class="bi bi-headset"></i> Suporte</a>
+          <a href="#privacidade"
+            ><i class="bi bi-shield-check"></i> Privacidade</a
+          >
+          <a href="#termos"><i class="bi bi-file-earmark-text"></i> Termos</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggleBtn = document.getElementById("toggle-sidebar");
+      const sidebar = document.getElementById("sidebar");
+      const conteudo = document.getElementById("conteudo");
+      const rodape = document.getElementById("rodape");
+
+      toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("recolhida");
+        conteudo.classList.toggle("expandido");
+        rodape.classList.toggle("expandido");
+      });
+    </script>
   </body>
 </html>
